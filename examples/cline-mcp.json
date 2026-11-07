@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "AiLinkAny": {
+      "type": "streamableHttp",
+      "url": "https://mcp.ailinkany.com/mcp",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

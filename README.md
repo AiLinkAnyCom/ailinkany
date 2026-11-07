@@ -35,6 +35,10 @@ In every mode the AI can read code, edit files, run tests and commit — on your
 
 Details: [Getting started](docs/en/getting-started.md) · [Features](docs/en/features.md)
 
+## Cline connection
+
+See [the Cline installation guide](llms-install.md) and [example configuration](examples/cline-mcp.json). The endpoint uses individual OAuth authorization; no shared API key is required. Cline CLI OAuth was verified; Marketplace review is pending and this is not an approved Marketplace listing.
+
 ## Key features
 
 - **Cloud relay, zero network setup** – no tunnel, port forwarding or public IP.
