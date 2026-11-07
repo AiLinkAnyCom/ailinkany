@@ -39,6 +39,10 @@ Details: [Getting started](docs/en/getting-started.md) · [Features](docs/en/fea
 
 See [the Cline installation guide](llms-install.md) and [example configuration](examples/cline-mcp.json). The endpoint uses individual OAuth authorization; no shared API key is required. Cline CLI OAuth was verified; Marketplace review is pending and this is not an approved Marketplace listing.
 
+## Gemini CLI extension
+
+Install with `gemini extensions install https://github.com/AiLinkAnyCom/ailinkany`. See [Gemini CLI setup and authorization](docs/gemini-cli.md). The extension connects to the hosted MCP using individual OAuth. Actual computer execution requires an eligible subscription. Gallery indexing and host OAuth/tool-call acceptance are tracked separately from publishing these files.
+
 ## Key features
 
 - **Cloud relay, zero network setup** – no tunnel, port forwarding or public IP.

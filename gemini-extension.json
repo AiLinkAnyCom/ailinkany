@@ -1,0 +1,16 @@
+{
+  "name": "ailinkany",
+  "version": "1.0.0",
+  "description": "Use your authorized Windows PC from Gemini CLI through AiLinkAny Remote MCP and individual OAuth.",
+  "mcpServers": {
+    "ailinkany": {
+      "httpUrl": "https://mcp.ailinkany.com/mcp",
+      "timeout": 600000,
+      "oauth": {
+        "enabled": true,
+        "scopes": ["mcp:tools"]
+      }
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
