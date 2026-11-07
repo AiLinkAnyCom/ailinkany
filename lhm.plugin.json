@@ -1,0 +1,94 @@
+{
+  "identifier": "ailinkanycom-ailinkany",
+  "name": "AiLinkAny",
+  "version": "1.0.0",
+  "description": "Operate your own authorized Windows computers through Remote MCP and individual OAuth. Files, Shell, applications and task status. Actual execution requires an AiLinkAny subscription; the Windows client and cloud backend are proprietary.",
+  "author": "AiLinkAny",
+  "authorUrl": "https://github.com/AiLinkAnyCom",
+  "homepage": "https://ailinkany.com/",
+  "icon": "https://raw.githubusercontent.com/AiLinkAnyCom/ailinkany/main/assets/ailinkany-logo-400.png",
+  "cloudEndpoint": "https://mcp.ailinkany.com/mcp",
+  "tags": [
+    "windows",
+    "remote-computer",
+    "oauth",
+    "developer-tools"
+  ],
+  "tools": [
+    {
+      "name": "get_task_status",
+      "description": "Returns a lightweight plain-text timeline for a previously submitted computer task by command_id. Use it after a device tool returns QUEUED, DELIVERED, ACKED, or RUNNING. Show only newly reached lifecycle steps or meaningful new recent output to the user as concise text, preserving the returned target-computer local time and timezone. Never create a card/table, expose unchanged polls, invent percentages, or resubmit the original operation.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The command_id returned by a previous device tool call."
+          }
+        },
+        "required": [
+          "command_id"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_devices",
+      "description": "Use this when the user asks which computers are paired, whether they are online, or when the target is unclear among multiple computers. Returns every computer paired with the current account and its connection state. The user does not need to mention ailinkany.com, MCP, a connector, or a plugin. When the user already named a computer, call the requested device tool directly with device_name instead.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "connection_diagnostics",
+      "description": "Use this when computer control fails, a connector appears disconnected, a computer is offline, or subscription, authorization, session, delivery, or runtime problems are suspected. Diagnose automatically from the current AI Session, MCP authorization, target device, Device Session, WebSocket, and recent task without silently guessing among multiple computers. The user does not need to mention ailinkany.com, MCP, a connector, a plugin, or this tool name.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ai_session_id": {
+            "description": "Current AI Session id returned by start_ai_session. Pass it when diagnosing why this chat/tab cannot control the computer.",
+            "type": "string",
+            "minLength": 1
+          },
+          "workflow_id": {
+            "description": "Current workflow_id paired with ai_session_id.",
+            "type": "string",
+            "minLength": 1
+          },
+          "device_id": {
+            "description": "Optional target device id. Do not guess when multiple devices exist.",
+            "type": "string",
+            "minLength": 1
+          },
+          "device_name": {
+            "description": "Optional target computer name or remark.",
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}
