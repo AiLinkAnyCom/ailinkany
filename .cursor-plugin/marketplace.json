@@ -1,0 +1,8 @@
+{
+  "name": "ailinkany",
+  "owner": { "name": "AiLinkAny" },
+  "metadata": { "description": "Connect Cursor to your authorized Windows computers through AiLinkAny." },
+  "plugins": [
+    { "name": "ailinkany", "source": "plugins/ailinkany", "description": "Remote Windows tools with individual OAuth authorization." }
+  ]
+}

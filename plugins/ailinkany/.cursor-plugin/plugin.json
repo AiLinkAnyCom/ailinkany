@@ -1,0 +1,11 @@
+{
+  "name": "ailinkany",
+  "version": "1.0.0",
+  "description": "Use your authorized Windows PC from Cursor through AiLinkAny Remote MCP and individual OAuth.",
+  "author": { "name": "AiLinkAny" },
+  "homepage": "https://ailinkany.com/",
+  "repository": "https://github.com/AiLinkAnyCom/ailinkany",
+  "keywords": ["mcp", "windows", "remote-computer", "oauth"],
+  "logo": "https://raw.githubusercontent.com/AiLinkAnyCom/ailinkany/main/assets/ailinkany-logo-400.png",
+  "mcpServers": "mcp.json"
+}
