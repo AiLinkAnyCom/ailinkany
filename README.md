@@ -10,7 +10,7 @@ AiLinkAny decouples your AI from your work computer. Change AI assistants (ChatG
 - MCP endpoint: **`https://mcp.ailinkany.com/mcp`**
 - Sign-in: **OAuth 2.1** (no API key)
 
-> The AiLinkAny client is closed source. This repository hosts public documentation only.
+> The AiLinkAny client is closed source. This repository hosts public documentation and small client-side connectors; the product core is not included.
 
 ## Three ways to connect
 
@@ -42,6 +42,10 @@ See [the Cline installation guide](llms-install.md) and [example configuration](
 ## Gemini CLI extension
 
 Install with `gemini extensions install https://github.com/AiLinkAnyCom/ailinkany`. See [Gemini CLI setup and authorization](docs/gemini-cli.md). The extension connects to the hosted MCP using individual OAuth. Actual computer execution requires an eligible subscription. Gallery indexing and host OAuth/tool-call acceptance are tracked separately from publishing these files.
+
+## DeepSeek Harness connector (preview)
+
+A third-party connector for DeepSeek Harness 0.2.2-rc.1 is available in [plugins/deepseek-harness](plugins/deepseek-harness). Read [installation, privacy and support](docs/deepseek-harness.md). This does not add tools to the ordinary DeepSeek website or mobile app. Offline package/profile checks passed; live OAuth acceptance is still pending. No official DeepSeek directory approval is claimed.
 
 ## Key features
 
