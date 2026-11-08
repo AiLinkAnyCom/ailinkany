@@ -1,0 +1,36 @@
+{
+  "name": "dsh-plugin-ailinkany",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "description": "Connect DeepSeek Harness to your authorized Windows PCs through AiLinkAny OAuth MCP.",
+  "author": "AiLinkAny",
+  "homepage": "https://github.com/AiLinkAnyCom/ailinkany",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AiLinkAnyCom/ailinkany.git",
+    "directory": "plugins/deepseek-harness"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22",
+    "dsh": "0.2.2-rc.1"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-mcp-client": "0.2.2-rc.1"
+  },
+  "dependencies": {
+    "mcp-remote": "0.16.5"
+  }
+}

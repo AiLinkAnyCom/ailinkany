@@ -1,0 +1,46 @@
+{
+  "format": 1,
+  "title": {
+    "en": "AiLinkAny connectors",
+    "zh": "AiLinkAny 接入插件"
+  },
+  "description": {
+    "en": "Third-party personal OAuth connector for DeepSeek Harness. No official endorsement.",
+    "zh": "DeepSeek Harness 第三方个人 OAuth 接入，不代表官方推荐。"
+  },
+  "plugins": [
+    {
+      "name": "dsh-plugin-ailinkany",
+      "title": {
+        "en": "AiLinkAny",
+        "zh": "AiLinkAny 远程电脑"
+      },
+      "description": {
+        "en": "Connect Harness to your authorized Windows PCs using account-level OAuth.",
+        "zh": "通过账户 OAuth 连接本人授权的 Windows 电脑。"
+      },
+      "icon": "https://raw.githubusercontent.com/AiLinkAnyCom/ailinkany/main/assets/ailinkany-logo-400.png",
+      "author": "AiLinkAny",
+      "homepage": "https://ailinkany.com",
+      "repository": {
+        "url": "https://github.com/AiLinkAnyCom/ailinkany",
+        "directory": "plugins/deepseek-harness"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1794122788,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/AiLinkAnyCom/ailinkany",
+            "commit": "3f3410798831b28a88f69b253c730c3b51f5b9e0",
+            "path": "plugins/deepseek-harness"
+          },
+          "engines": {
+            "dsh": "0.2.2-rc.1"
+          }
+        }
+      ]
+    }
+  ]
+}
