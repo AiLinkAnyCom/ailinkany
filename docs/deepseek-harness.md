@@ -19,7 +19,7 @@ Install from the immutable source revision below (PowerShell, bash and other she
 dsh plugin --profile web add "git+https://github.com/AiLinkAnyCom/ailinkany.git#3f3410798831b28a88f69b253c730c3b51f5b9e0&path:/plugins/deepseek-harness"
 ```
 
-For the experimental discovery page, the index URL is `https://raw.githubusercontent.com/AiLinkAnyCom/ailinkany/main/markets/deepseek-harness.json` once this draft is merged. It is a third-party AiLinkAny index, not a built-in DeepSeek market. Select the profile that you actually use: installing into a CLI profile does not automatically install into another desktop/Web UI profile. This bundle adds an MCP connection; it does not install or configure a DeepSeek model API key.
+For the experimental discovery page, the index URL is `https://raw.githubusercontent.com/AiLinkAnyCom/ailinkany/main/markets/deepseek-harness.json`. It is a third-party AiLinkAny index, not a built-in DeepSeek market. Select the profile that you actually use: installing into a CLI profile does not automatically install into another desktop/Web UI profile. This bundle adds an MCP connection; it does not install or configure a DeepSeek model API key.
 
 First-time connection uses `mcp-remote` to open the account authorization flow. Allow up to 5 minutes for login and consent. If authorization times out, reload the plugin in the same profile and try again. Never paste OAuth or Device Tokens into the model conversation.
 
@@ -64,3 +64,7 @@ If tools are absent, check the profile, supported Harness version, Node executab
 - [Harness custom plugin indexes](https://deepseek-harness.github.io/deepseek-harness/guide/plugin-market)
 
 Publication of source files, successful OAuth/tool acceptance, and inclusion in an official directory are distinct outcomes. Release notes must state only the checks actually completed.
+
+## Verified acceptance (2026-11-08)
+
+The official Harness 0.2.2-rc.1 runtime loaded the plugin installed from the immutable Git revision above. User-completed OAuth succeeded; 116 tools registered, and the registered list_devices tool successfully returned three devices with explicit device selection required. Disposing the runtime closed the proxy cleanly. No computer execution or paid model conversation was performed. A transient TLS ECONNRESET after the callback recovered on reconnect. The installer emitted peer warnings and its peers-check command failed internally; these remain upstream diagnostics, while the actual installed plugin runtime passed this acceptance scope.

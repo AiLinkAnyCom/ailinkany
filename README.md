@@ -45,7 +45,7 @@ Install with `gemini extensions install https://github.com/AiLinkAnyCom/ailinkan
 
 ## DeepSeek Harness connector (preview)
 
-A third-party connector for DeepSeek Harness 0.2.2-rc.1 is available in [plugins/deepseek-harness](plugins/deepseek-harness). Read [installation, privacy and support](docs/deepseek-harness.md). This does not add tools to the ordinary DeepSeek website or mobile app. Offline package/profile checks passed; live OAuth acceptance is still pending. No official DeepSeek directory approval is claimed.
+A third-party connector for DeepSeek Harness 0.2.2-rc.1 is available in [plugins/deepseek-harness](plugins/deepseek-harness). Read [installation, privacy and support](docs/deepseek-harness.md). This does not add tools to the ordinary DeepSeek website or mobile app. Package/profile checks, user-completed OAuth, 116-tool registration and an actual device-list call through the official Harness runtime passed. Computer execution and model conversations were not tested. No official DeepSeek directory approval is claimed.
 
 ## Key features
 
