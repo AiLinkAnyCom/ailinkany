@@ -13,7 +13,13 @@ Harness is a separate application; ordinary AiLinkAny Remote MCP clients do not 
 
 ## Install into your actual profile
 
-The public installation command and immutable source revision are provided with the release. Select the profile that you actually use: installing into a CLI profile does not automatically install into another desktop/Web UI profile. This bundle adds an MCP connection; it does not install or configure a DeepSeek model API key.
+Install from the immutable source revision below (PowerShell, bash and other shells must preserve the quoted spec):
+
+```sh
+dsh plugin --profile web add "git+https://github.com/AiLinkAnyCom/ailinkany.git#3f3410798831b28a88f69b253c730c3b51f5b9e0&path:/plugins/deepseek-harness"
+```
+
+For the experimental discovery page, the index URL is `https://raw.githubusercontent.com/AiLinkAnyCom/ailinkany/main/markets/deepseek-harness.json` once this draft is merged. It is a third-party AiLinkAny index, not a built-in DeepSeek market. Select the profile that you actually use: installing into a CLI profile does not automatically install into another desktop/Web UI profile. This bundle adds an MCP connection; it does not install or configure a DeepSeek model API key.
 
 First-time connection uses `mcp-remote` to open the account authorization flow. Allow up to 5 minutes for login and consent. If authorization times out, reload the plugin in the same profile and try again. Never paste OAuth or Device Tokens into the model conversation.
 
